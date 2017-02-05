@@ -11,6 +11,7 @@ $ brew install pyenv
 $ echo 'export PYENV_ROOT="${HOME}/.pyenv"' >> ~/.bash_profile
 $ echo 'export PATH="${PYENV_ROOT}/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+$ echo 'export PATH="${HOME}/.local/bin"' >> ~/.bash_profile
 
 $ exec $SHELL -l
 ```
@@ -32,9 +33,7 @@ $ pip install --user jupyter
 $ pip install --user -U pip setuptools 
 $ pip install --user numpy
 $ pip install --user chainer
-$ pip uninstall --user pyparsing
-$ pip install --user pyparsing=="1.5.7" pydot=="1.1.0" matplotlib
-$ pip install --user -U jupyter
+$ pip install --user matplotlib
 
 ```
 
@@ -43,11 +42,6 @@ $ pip install --user -U jupyter
 $ jupyter notebook
 ```
 ## Setup docker(PaintChainer)
-
-Pre-Trained Models
-
-Download following model files to cgi-bin/paint_x2_unet/models/
-http://paintschainer.preferred.tech/downloads/
 
 - Setup docker
 
