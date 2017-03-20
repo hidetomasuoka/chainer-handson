@@ -8,14 +8,12 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-USER $NB_USER
+
 
 COPY requirements.txt ./
-COPY chainer-ja.ipynb ./
 
 RUN pip install -r requirements.txt
-RUN pip uninstall jupyter
-RUN pip install jupyter==4.2
+COPY chainer-ja.ipynb /home/jovyan/work
 
 
 
