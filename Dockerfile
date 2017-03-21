@@ -14,6 +14,7 @@ COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
 COPY chainer-ja.ipynb /home/jovyan/work
+COPY image/ /home/jovyan/work
 
 
 
